@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MC-TRANSFORMER | الجيل القادم</title>
+    <title>MC-TRANSFORMER | AI Mod Builder</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -13,30 +13,39 @@
     <div class="glass-container w-full max-w-2xl rounded-[2.5rem] p-10 text-center relative">
         <header class="mb-8">
             <div class="logo-icon inline-block p-4 bg-blue-600 rounded-3xl shadow-lg mb-6">
-                <i class="fas fa-sync-alt text-3xl text-white"></i>
+                <i class="fas fa-robot text-3xl text-white"></i>
             </div>
-            <h1 class="text-4xl font-black text-white tracking-tighter">MC TRANSFORMER</h1>
-            <p class="text-gray-500 mt-2 font-medium">حوّل موداتك بلمشة واحدة</p>
+            <h1 class="text-4xl font-black text-white tracking-tighter">MC AI BUILDER</h1>
+            <p class="text-gray-500 mt-2 font-medium">اكتب أوامرك (مثل /money) أو ارفع ملفك</p>
         </header>
 
-        <div id="drop-zone" class="drop-area border-2 border-dashed border-gray-800 rounded-[2rem] p-16 cursor-pointer transition-all">
+        <div class="mb-4">
+            <textarea id="ai-input" placeholder="اكتب أوامرك هنا... مثال: /money" 
+            class="w-full h-32 p-4 bg-black border border-gray-800 rounded-2xl text-white focus:border-blue-600 outline-none transition-all"></textarea>
+            <button onclick="buildWithAI()" class="w-full mt-2 p-4 bg-blue-600 rounded-2xl text-white font-bold hover:bg-blue-700 transition-all">
+                <i class="fas fa-hammer ml-2"></i> بناء المود (Build)
+            </button>
+        </div>
+
+        <div class="text-gray-600 my-4 font-bold text-xs">--- أو اسحب ملفاً ---</div>
+
+        <div id="drop-zone" class="drop-area border-2 border-dashed border-gray-800 rounded-[2rem] p-10 cursor-pointer transition-all">
             <input type="file" id="file-input" class="hidden" accept=".jar,.mcaddon">
             
             <div id="status-idle">
-                <i class="fas fa-file-export text-5xl text-gray-700 mb-4 block"></i>
-                <span class="text-xl font-bold text-gray-300">ألقِ الملف هنا</span>
-                <p class="text-xs text-gray-600 mt-2 uppercase tracking-widest font-black">JAR ⇄ MCADDON</p>
+                <i class="fas fa-file-export text-4xl text-gray-700 mb-4 block"></i>
+                <span class="text-lg font-bold text-gray-300">ألقِ الملف هنا</span>
             </div>
 
             <div id="status-loading" class="hidden">
                 <div class="custom-loader mx-auto mb-4"></div>
-                <p class="text-blue-500 font-bold animate-pulse">جاري التحويل الأسطوري...</p>
+                <p class="text-blue-500 font-bold animate-pulse">جاري البناء الذكي...</p>
             </div>
         </div>
 
         <footer class="mt-8 flex justify-center gap-8 text-[10px] font-bold text-gray-600 uppercase tracking-widest">
-            <span><i class="fas fa-bolt text-blue-500"></i> High Performance</span>
-            <span><i class="fas fa-shield-virus text-blue-500"></i> Secure Sandbox</span>
+            <span><i class="fas fa-bolt text-blue-500"></i> Fabric 1.20.1</span>
+            <span><i class="fas fa-microchip text-blue-500"></i> AI Powered</span>
         </footer>
     </div>
 
