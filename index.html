@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MC-TRANSFORMER | الجيل القادم</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="min-h-screen flex items-center justify-center p-4">
+
+    <div class="glass-container w-full max-w-2xl rounded-[2.5rem] p-10 text-center relative">
+        <header class="mb-8">
+            <div class="logo-icon inline-block p-4 bg-blue-600 rounded-3xl shadow-lg mb-6">
+                <i class="fas fa-sync-alt text-3xl text-white"></i>
+            </div>
+            <h1 class="text-4xl font-black text-white tracking-tighter">MC TRANSFORMER</h1>
+            <p class="text-gray-500 mt-2 font-medium">حوّل موداتك بلمشة واحدة</p>
+        </header>
+
+        <div id="drop-zone" class="drop-area border-2 border-dashed border-gray-800 rounded-[2rem] p-16 cursor-pointer transition-all">
+            <input type="file" id="file-input" class="hidden" accept=".jar,.mcaddon">
+            
+            <div id="status-idle">
+                <i class="fas fa-file-export text-5xl text-gray-700 mb-4 block"></i>
+                <span class="text-xl font-bold text-gray-300">ألقِ الملف هنا</span>
+                <p class="text-xs text-gray-600 mt-2 uppercase tracking-widest font-black">JAR ⇄ MCADDON</p>
+            </div>
+
+            <div id="status-loading" class="hidden">
+                <div class="custom-loader mx-auto mb-4"></div>
+                <p class="text-blue-500 font-bold animate-pulse">جاري التحويل الأسطوري...</p>
+            </div>
+        </div>
+
+        <footer class="mt-8 flex justify-center gap-8 text-[10px] font-bold text-gray-600 uppercase tracking-widest">
+            <span><i class="fas fa-bolt text-blue-500"></i> High Performance</span>
+            <span><i class="fas fa-shield-virus text-blue-500"></i> Secure Sandbox</span>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
